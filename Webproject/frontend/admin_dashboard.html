@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Farm Bandhu</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="asset/css/dashboard.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="asset/images/logo.png" alt="Farm Bandhu Logo" onerror="this.onerror=null;this.src='https://placehold.co/120x50/265df2/ffffff?text=Farm+Bandhu';">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">User Management</a></li>
+                <li><a href="#">Listings</a></li>
+                <li><a href="#">Reports</a></li>
+            </ul>
+            <a href="index.html" class="btn">Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="welcome-section">
+            <h1>Admin Dashboard</h1>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <i class='bx bxs-user-detail'></i>
+                <div class="stat-info">
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class='bx bxs-leaf'></i>
+                <div class="stat-info">
+                    <h3>Active Listings</h3>
+                    <p>480</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class='bx bx-check-shield'></i>
+                <div class="stat-info">
+                    <h3>Pending Approvals</h3>
+                    <p>15</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class='bx bx-rupee'></i>
+                <div class="stat-info">
+                    <h3>Total Revenue</h3>
+                    <p>₹5,50,000</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Pending Crop Approvals</h2>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Farmer Name</th>
+                        <th>Crop</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Date Listed</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ram Singh</td>
+                        <td>Onion</td>
+                        <td>50 Quintals</td>
+                        <td>₹1500 / Qtl</td>
+                        <td>26 Aug 2025</td>
+                        <td>
+                            <div class="request-actions">
+                                <button class="btn-accept">Approve</button>
+                                <button class="btn-reject">Reject</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sita Devi</td>
+                        <td>Wheat</td>
+                        <td>100 Quintals</td>
+                        <td>₹2100 / Qtl</td>
+                        <td>25 Aug 2025</td>
+                        <td>
+                            <div class="request-actions">
+                                <button class="btn-accept">Approve</button>
+                                <button class="btn-reject">Reject</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+         <section class="card">
+            <h2>User Management</h2>
+             <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Phone Number</th>
+                        <th>Date Joined</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ram Singh</td>
+                        <td>Farmer</td>
+                        <td>+91 1234567890</td>
+                        <td>15 Jul 2025</td>
+                        <td>
+                             <button class="btn btn-secondary">View Profile</button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>Vikram Kumar</td>
+                        <td>Buyer</td>
+                        <td>+91 9876543210</td>
+                        <td>12 Jul 2025</td>
+                        <td>
+                            <button class="btn btn-secondary">View Profile</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+</html>

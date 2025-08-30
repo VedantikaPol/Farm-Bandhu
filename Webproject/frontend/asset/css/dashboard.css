@@ -1,0 +1,197 @@
+/* =================================
+   DASHBOARD SPECIFIC STYLES
+==================================== */
+
+body {
+    background-color: #f4f7fa;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.welcome-section h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.header-actions .btn i {
+    margin-right: 8px;
+}
+
+/* Search Bar for Buyer */
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 400px;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+.search-bar .btn {
+    border-radius: 0 5px 5px 0;
+}
+
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid hsl(226, 65%, 28%);
+}
+
+.profile-card h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.profile-card p {
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.listing-form textarea {
+    height: 100px;
+    resize: vertical;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.browse-item .status-available {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.browse-item .status-booked {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* Request List Styles */
+.request-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.request-item:last-child {
+    border-bottom: none;
+}
+.request-item p {
+    margin: 0 0 10px 0;
+}
+.request-actions {
+    display: flex;
+    gap: 10px;
+}
+.btn-accept, .btn-reject {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-accept {
+    background-color: #28a745;
+    color: #fff;
+}
+.btn-reject {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Other styles from previous dashboard.css */
+.mandi-card h3 { display: flex; align-items: center; gap: 10px; font-size: 18px; margin-bottom: 15px; }
+.mandi-price { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.mandi-price .price { font-weight: 600; color: #28a745; }
+.view-more { display: block; text-align: center; margin-top: 15px; color: hsl(226, 65%, 28%); font-weight: 600; text-decoration: none; }
+.listing-form { display: flex; flex-direction: column; gap: 15px; }
+.listing-form input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+.file-upload label { display: inline-block; cursor: pointer; }
+.browse-item { display: flex; align-items: center; gap: 15px; padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
+.browse-item:last-child { border-bottom: none; }
+.browse-item img { width: 100px; height: 75px; border-radius: 8px; object-fit: cover; }
+.browse-details { flex-grow: 1; }
+.browse-details h4 { font-size: 18px; font-weight: 600; }
+.browse-details p { color: #666; }
+.browse-details .price { font-weight: 600; color: #333; }
+.cart-empty { text-align: center; padding: 20px; color: #888; }
+.service-buttons { display: flex; gap: 15px; margin-top: 10px; }
+.service-buttons .btn { flex-grow: 1; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.hidden-section { display: none; }
+.btn-primary { background-color: hsl(226, 65%, 28%); }
+.btn-secondary { background-color: #6c757d; }
+@media (max-width: 992px) { .dashboard-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .welcome-section { flex-direction: column; align-items: flex-start; gap: 15px; } .header-actions, .search-bar { width: 100%; } .header-actions .btn { flex-grow: 1; } .service-buttons { flex-direction: column; } }

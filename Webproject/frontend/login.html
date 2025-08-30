@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register - Farm Bandhu</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap">
+    <!-- Updated CSS links for frontend-only structure -->
+    <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="asset/css/login.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="container navbar">
+            <a href="#" class="logo">
+                <img src="asset/images/logo.png" alt="Farm Bandhu Logo" onerror="this.onerror=null;this.src='https://placehold.co/120x50/265df2/ffffff?text=Farm+Bandhu';">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <div class="form-box login">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="USERNAME" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="PASSWORD" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="forget-link">
+                    <a href="#">Forget password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>or Login via</p>
+                <div class="google-icon">
+                    <a href="#"><i class='bx bxl-google'></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="USERNAME" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="tel" placeholder="PHONE NUMBER" pattern="[0-9]{10}" required>
+                    <i class='bx bxs-phone'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="PASSWORD" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-box">
+                    <select required>
+                        <option value="" disabled selected>Select Role</option>
+                        <option value="Farmer">Farmer</option>
+                        <option value="Buyer">Buyer</option>
+                        <option value="Equipment owner">Equipment owner</option>
+                        <option value="Transport Provider">Transport Provider</option>
+                    </select>
+                    <i class='bx bxs-user-badge'></i>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome to Farm Bandhu!</h1>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn">Register</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="asset/js/login.js"></script>
+</body>
+</html>

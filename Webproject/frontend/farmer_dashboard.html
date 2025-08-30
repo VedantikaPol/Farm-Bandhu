@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard - Farm Bandhu</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="asset/css/dashboard.css">
+</head>
+<body>
+
+    <!-- Dashboard Header -->
+    <header class="header">
+        <nav class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="asset/images/logo.png" alt="Farm Bandhu Logo" onerror="this.onerror=null;this.src='https://placehold.co/120x50/265df2/ffffff?text=Farm+Bandhu';">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">My Crop Listings</a></li>
+                <li><a href="#">My Bookings</a></li>
+            </ul>
+            <a href="index.html" class="btn">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-container">
+        <section class="welcome-section">
+            <h1>Welcome back, [Farmer Name]!</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary"><i class='bx bx-plus'></i> List New Crop</button>
+                <button class="btn"><i class='bx bx-list-ul'></i> View My Crops</button>
+            </div>
+        </section>
+
+        <div class="dashboard-grid">
+            <!-- Left Column -->
+            <aside class="left-column">
+                <div class="card profile-card">
+                    <img src="https://placehold.co/100x100/a0d2a4/ffffff?text=Farmer" alt="Profile Picture" class="profile-pic">
+                    <h3>[Farmer Name]</h3>
+                    <p><i class='bx bxs-map'></i> Pune, Maharashtra</p>
+                    <p><i class='bx bxs-phone'></i> +91 1234567890</p>
+                </div>
+                <div class="card mandi-card">
+                    <h3><i class='bx bx-store-alt'></i> Live Mandi Prices (Pune)</h3>
+                    <div class="mandi-price">
+                        <span>Onion</span>
+                        <span class="price">₹1500 / Quintal</span>
+                    </div>
+                    <div class="mandi-price">
+                        <span>Tomato</span>
+                        <span class="price">₹2200 / Quintal</span>
+                    </div>
+                    <a href="#" class="view-more">View More Prices</a>
+                </div>
+                 <div class="card">
+                    <h2>My Cart / Bookings</h2>
+                    <div class="cart-empty">
+                        <p>Your cart is empty.</p>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Proceed</button>
+                </div>
+            </aside>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="card">
+                    <h2>Create New Crop Listing</h2>
+                    <form class="listing-form">
+                        <input type="text" placeholder="Crop Name (e.g., Onion, Wheat)">
+                        <input type="number" placeholder="Quantity (in Quintals)">
+                        <input type="number" placeholder="Price per Quintal (₹)">
+                        <div class="file-upload">
+                           <input type="file" id="crop-image" hidden>
+                           <label for="crop-image" class="btn"><i class='bx bx-upload'></i> Add Image</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Listing</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Optional Services</h2>
+                    <p>Do you need to rent equipment or book transport?</p>
+                    <div class="service-buttons">
+                        <button id="rent-equipment-btn" class="btn btn-secondary"><i class='bx bxs-tractor'></i> Rent Equipment</button>
+                        <button id="book-transport-btn" class="btn btn-secondary"><i class='bx bxs-truck'></i> Book Transport</button>
+                    </div>
+                </div>
+
+                <div id="rent-equipment-section" class="card hidden-section">
+                    <h2>Rent Equipment</h2>
+                    <div class="browse-list">
+                        <div class="browse-item">
+                            <img src="https://placehold.co/150x100/f0a5a5/ffffff?text=Tractor" alt="Tractor">
+                            <div class="browse-details">
+                                <h4>Tractor</h4>
+                                <p>Owner: Ram Pawar</p>
+                                <p class="price">₹800 / hour</p>
+                            </div>
+                            <button class="btn btn-secondary request-btn">Request to Rent</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="book-transport-section" class="card hidden-section">
+                    <h2>Book Transport</h2>
+                     <div class="browse-list">
+                        <div class="browse-item">
+                            <img src="https://placehold.co/150x100/a0d2a4/ffffff?text=Truck" alt="Truck">
+                            <div class="browse-details">
+                                <h4>Truck (10 Ton)</h4>
+                                <p>Provider: Sita Travels</p>
+                                <p class="price">₹20 / km</p>
+                            </div>
+                            <button class="btn btn-secondary request-btn">Request Booking</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="asset/js/dashboard.js"></script>
+</body>
+</html>
